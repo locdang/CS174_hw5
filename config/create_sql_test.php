@@ -16,11 +16,7 @@
     $query .= "DROP TABLE IF EXISTS USER;";
     $query .= "CREATE TABLE USER (ID CHAR(9) not null, NAME VARCHAR(20) not null, PRIMARY KEY(ID));";
     $query .= "DROP TABLE IF EXISTS USER_POST;";
-<<<<<<< HEAD
     $query .= "CREATE TABLE USER_POST (USER_ID CHAR(9) not null, TWEETS VARCHAR(140) not null, Time INT, PRIMARY KEY(USER_ID), FOREIGN KEY(USER_ID) REFERENCES USER(ID));";
-=======
-    $query .= "CREATE TABLE USER_POST (USER_ID CHAR(9) not null, TWEETS VARCHAR(140) not null, TIME INT, PRIMARY KEY(USER_ID), FOREIGN KEY(USER_ID) REFERENCES USER(ID));";
->>>>>>> d9dc9f6fd8607fa9b1f4de4f983419155f5d8c97
     
     if (mysqli_multi_query($db,$query)) {
         echo "Database and Schemas for $database created successfully.";
